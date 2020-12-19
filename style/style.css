@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Clarendon';
+  src:  url('/assets/fonts/ClarendonRegular.otf') format('otf');
+}
+
+*{
+  font-family: Clarendon !important;
+}
+
+.logo {
+  width: 100px;
+}
+
+.primary-caption{
+  font-weight:600;
+  font-size: 12px;
+  color: #2F353D;
+}
+
+.link-caption{
+  text-decoration: none;
+}
+
+.bodyColor{
+  background-color: #F1F5F9;
+}
+
+#headerDropup{
+  display: none;
+}
