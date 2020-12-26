@@ -1,0 +1,29 @@
+html, body{
+  height: 100%;
+}
+
+body { 
+  background: url(../assets/sony-login-bgpage.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.sony-login{
+  height: inherit;
+}
+
+.sony-card{
+  width: 24rem;
+}
+
+img.card-header-img{
+  height: 40px;
+}
+
+a.card-text{
+  text-decoration: none;
+}
+
