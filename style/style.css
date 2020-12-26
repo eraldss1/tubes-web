@@ -7,8 +7,8 @@
   font-family: Clarendon !important;
 }
 
-.logo {
-  width: 100px;
+img.logo {
+  height: 28px;
 }
 
 .primary-caption{
@@ -35,3 +35,10 @@
   font-size: 48px;
   word-wrap: break-word;
 }
+
+.sony-nav{
+  width: inherit;
+}
+ .sony-nav-space{
+   margin-right: 100px;
+ }

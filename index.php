@@ -12,9 +12,9 @@ if (isset($_SESSION['username'])) {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style/style.css" />
-  <link rel="stylesheet" href="style/slider.css" />
-  <link rel="stylesheet" href="style/footer.css" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/slider.css" />
+  <link rel="stylesheet" type="text/css" href="style/footer.css" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
@@ -79,46 +79,47 @@ if (isset($_SESSION['username'])) {
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="d-flex justify-content-end container">
-        <img src="assets/sony_logo_white.png" class="logo" alt="Sony Indonesia" />
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <div class="d-flex col-6">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Elektronik
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="#">Televisi & Home Cinema</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Audio</a></li>
-                <li><a class="dropdown-item" href="#">Kamera</a></li>
-                <li><a class="dropdown-item" href="#">Kamera Video</a></li>
-              </ul>
-            </li>
+      <div class="container mx-auto">
+          <ul class="navbar-nav mb-2 mb-lg-0 sony-nav">
+            <div class="col-2 d-flex justify-content-center">
+              <img src="assets/sony_logo_white.png" class="logo mt-2" alt="Sony Indonesia" />
+            </div>
+            <div class="col-5 d-flex justify-content-start">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Elektronik
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Televisi & Home Cinema</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Audio</a></li>
+                  <li><a class="dropdown-item" href="#">Kamera</a></li>
+                  <li><a class="dropdown-item" href="#">Kamera Video</a></li>
+                </ul>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Playstation</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Playstation</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">Hiburan</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hiburan</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">Dukungan</a>
-            </li>
-          </div>
-
-          <div class="d-flex col-4">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                My Sony
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <?php
-                if (isset($username)) {
-                  echo '<div class="dropdown-item">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dukungan</a>
+              </li>
+            </div>
+            <div class="col-5 d-flex justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  My Sony
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <?php
+                  if (isset($username)) {
+                    echo '<div class="dropdown-item">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#1F2024" width="28px">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
@@ -127,48 +128,49 @@ if (isset($_SESSION['username'])) {
                         <li><a class="dropdown-item" href="#">Ubah Profil</a></li>
                         <li><a class="dropdown-item" href="#">Keranjang Saya</a></li>
                         <li><a class="dropdown-item" href="logout.php">Keluar</a></li>';
-                } else {
-                  echo '<li><a class="dropdown-item" href="login.php">Masuk</a></li>
+                  } else {
+                    echo '<li><a class="dropdown-item" href="login.php">Masuk</a></li>
                         <li><a class="dropdown-item" href="register.html">Daftar</a></li>';
-                }
-                ?>
-              </ul>
-            </li>
-
-            <li class="nav-item mx-3">
-              <img class="nav-link" src="assets/love.svg" alt="" />
-            </li>
-
-            <div class="mx-2" style="background-color: #504d56">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Cari Sony
-                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-                  </svg>
-                </a>
-
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <div class="bg-light" style="width: 300px">
-                    <form class="d-flex">
-                      <input class="form-control m-2 border-0" type="cari" placeholder="Cari" aria-label="Cari" />
-                    </form>
-                  </div>
+                  }
+                  ?>
                 </ul>
               </li>
-            </div>
 
-            <div class="mx-2" style="background-color: #504d56">
-              <li class="nav-item dropup">
-                <button type="button" id="headerDropupButton" class="btn nav-link dropdown-toggle" onclick="headerDropup();">
-                  Situs Sony
-                </button>
+              <li class="nav-item mx-3">
+                <img class="nav-link" src="assets/love.svg" alt="" />
               </li>
+
+              <div class="mx-2" style="background-color: #504d56">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cari Sony
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                      <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="bg-light" style="width: 300px">
+                      <form class="d-flex">
+                        <input class="form-control m-2 border-0" type="cari" placeholder="Cari" aria-label="Cari" />
+                      </form>
+                    </div>
+                  </ul>
+                </li>
+              </div>
+
+              <div class="mx-2" style="background-color: #504d56">
+                <li class="nav-item dropup">
+                  <button type="button" id="headerDropupButton" class="btn nav-link dropdown-toggle" onclick="headerDropup();">
+                    Situs Sony
+                  </button>
+                </li>
+              </div>
             </div>
-          </div>
-        </ul>
+          </ul>
       </div>
+
     </nav>
 
     <div class="p-5 text-center bg-image" style="
