@@ -28,3 +28,10 @@
 #headerDropup{
   display: none;
 }
+
+.jumbotron-sony{
+  color: black;
+  text-align: left;
+  font-size: 48px;
+  word-wrap: break-word;
+}

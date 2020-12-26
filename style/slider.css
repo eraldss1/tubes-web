@@ -1,0 +1,27 @@
+.items {
+  width: 100%;
+}
+
+.slick-slide {
+  margin: 10px;
+  width: auto;
+}
+
+.slick-slide img {
+  height: 500px;
+  border: 0px solid #fff;
+}
+
+.sony-slick-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.slick-prev:before {
+  color: black !important;
+}
+
+.slick-next:before {
+  color: black !important;
+}
+

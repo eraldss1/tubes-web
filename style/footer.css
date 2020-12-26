@@ -1,0 +1,45 @@
+.upper-footer{
+  background-color: #1F2024;
+  height: 400px;
+}
+
+.lower-footer{
+  background-color: #1F2024;
+  height: 90px;
+}
+
+.lower-footer-text{
+  color:grey;
+  font-size: 12px;
+}
+
+.sony-footer-text{
+  color: #D8D8D8;
+  margin-bottom: 20px;
+}
+
+.sony-footer-box{
+  width: 200px;
+  border: 1px solid grey;
+  border-radius: auto;
+}
+
+p.p-text{
+  margin-bottom: 0;
+}
+
+a.link-text{
+  color: white !important;
+  text-decoration: none !important;
+  margin-right: 5px;
+}
+
+hr.sony-hr{
+  margin: 0;
+  border: 1sp solid white !important;
+}
+
+.footer-item{
+  width: 1000px;
+}
+
